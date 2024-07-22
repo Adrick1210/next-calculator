@@ -1,7 +1,17 @@
-import Image from "next/image";
+"use client"
+import Calculator from "@/components/Calculator";
+import Head from "@/components/Head";
+
 
 export default function Home() {
   return (
-    <div>Calculator app dev</div>
+    <div>
+      <div>
+        <Head />
+      </div>
+      <main>
+        <Calculator />
+      </main>
+    </div>
   );
 }

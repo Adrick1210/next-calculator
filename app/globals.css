@@ -31,3 +31,48 @@ body {
     text-wrap: balance;
   }
 }
+
+.calculator {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #f9f9f9;
+}
+
+.display {
+  background: #333;
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.button {
+  padding: 1rem;
+  font-size: 1.5rem;
+  background: #e2e8f0;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: #cbd5e0;
+}
+
+.clear {
+  grid-column: span 4;
+  background: #e53e3e;
+  color: #fff;
+}
