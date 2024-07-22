@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
 const Calculator: React.FC = () => {
-  const [display, setDisplay] = useState<string>("");
-  const [result, setResult] = useState<string>("");
+  const [input, setInput] = useState<string>("");
 
   const handleButtonClick = (value: string) => {
     if (value === "=") {
@@ -10,30 +9,28 @@ const Calculator: React.FC = () => {
     } else if (value === "C") {
       clearInput();
     } else {
-      setDisplay((prev) => prev + value);
+      setInput((prev) => prev + value);
     }
   };
 
   const clearInput = () => {
-    setDisplay("");
-    setResult("");
+    setInput("");
   };
 
   const calculateResult = () => {
     try {
       // Use Function constructor for simple calculations
-      const evalResult = Function(`return (${display})`)();
-      setResult(evalResult.toString());
+      const evalResult = Function(`return (${input})`)();
+      setInput(evalResult.toString());
     } catch (error) {
-      setResult("Error");
+      setInput("Error");
     }
   };
 
   return (
     <div className="calculator">
       <div className="display">
-        <div className="input">{display}</div>
-        <div className="result">{result}</div>
+        <div className="input">{input}</div>
       </div>
       <div className="buttons">
         {[

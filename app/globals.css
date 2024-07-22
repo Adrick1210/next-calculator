@@ -33,12 +33,12 @@ body {
 }
 
 .calculator {
-  max-width: 400px;
+  max-width: 550px;
   margin: 2rem auto;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: #f9f9f9;
+  background: #4c4a4a;
 }
 
 .display {
@@ -51,6 +51,10 @@ body {
   margin-bottom: 1rem;
 }
 
+.input {
+  height: 50px;
+}
+
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -60,7 +64,7 @@ body {
 .button {
   padding: 1rem;
   font-size: 1.5rem;
-  background: #e2e8f0;
+  background: #a0a1a2;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -68,7 +72,7 @@ body {
 }
 
 .button:hover {
-  background: #cbd5e0;
+  background: #afb0b2;
 }
 
 .clear {
